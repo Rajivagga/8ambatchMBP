@@ -1,3 +1,4 @@
+
 pipeline {
    agent any
    stages {
@@ -21,12 +22,8 @@ pipeline {
        }
 
        stage('Deploy Code') {
-	   when
-	   {
-	   branch "master"
-	   	   }
           steps {
-               sh "mvn tomcat7:deploy"
+               sh """"
                echo "Deploying Code"
                
           }
